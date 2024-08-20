@@ -1,6 +1,3 @@
-Here is the updated CKOS manual reflecting all the latest features, including version tracking, new commands like `version`, enhanced `dir` output, and the `format` command's additional behavior:
-
----
 
 ## CKOS Version 0.1.0 - User Manual
 
