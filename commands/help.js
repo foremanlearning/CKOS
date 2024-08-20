@@ -2,21 +2,43 @@
 
 commands.help = {
     execute: function(args, callback) {
-        const helpText = `
-            <strong>Welcome to CKOS (Computer Knowledge Enthusiast Operating System)</strong><br>
-            This operating system was invented by the community at www.tiktok.com/ckenthusiast.<br><br>
+        const outputDiv = document.getElementById('output');
 
-            <strong>Available commands:</strong><br>
-            <ul>
-                <li><strong>help</strong>: Show this help message with available commands.</li>
-                <li><strong>dir</strong>: Lists files and directories in the current directory.</li>
-                <li><strong>cd [directory-name]</strong>: Change the current directory to the specified directory. Use "cd .." to go up one level.</li>
-                <li><strong>read [filename.md]</strong>: Display the content of a markdown (.md) file inside a modal.</li>
-                <li><strong>view [filename]</strong>: Open and display an image (.webp) or video (.mp4) inside a modal.</li>
-            </ul>
+        // Define the help content for each command
+        const helpText = `
+            <div class="output-line">
+                <div><strong>CKOS Help - List of Available Commands:</strong></div>
+            </div>
+            <div class="output-line">
+                <div><strong>help</strong> - Displays this help message.</div>
+            </div>
+            <div class="output-line">
+                <div><strong>version</strong> - Displays the current version of CKOS.</div>
+            </div>
+            <div class="output-line">
+                <div><strong>dir</strong> - Displays the contents of the current directory, including file sizes and free space.</div>
+            </div>
+            <div class="output-line">
+                <div><strong>cd &lt;directory&gt;</strong> - Changes the current directory.</div>
+            </div>
+            <div class="output-line">
+                <div><strong>ckcode &lt;filename&gt;</strong> - Opens and edits HTML files using a built-in editor.</div>
+            </div>
+            <div class="output-line">
+                <div><strong>read &lt;filename&gt;</strong> - Reads and displays markdown (.md) files in a floating modal window.</div>
+            </div>
+            <div class="output-line">
+                <div><strong>view &lt;filename&gt;</strong> - Views images or videos in a floating modal. Supports .webp and .mp4 formats.</div>
+            </div>
+            <div class="output-line">
+                <div><strong>browser &lt;filename or URL&gt;</strong> - Renders HTML files in a floating modal as a preview, or opens external websites in an iframe. Includes bookmarks functionality (e.g., Foreman Learning).</div>
+            </div>
+            <div class="output-line">
+                <div><strong>format C: [/q]</strong> - Formats the C: drive. Supports quick format with the /q switch. Simulates formatting with progress indicators.</div>
+            </div>
         `;
 
-        // Send the help text to the terminal output via callback
-        callback(helpText);
+        // Append the help content to the output div
+        outputDiv.innerHTML += helpText;
     }
 };
