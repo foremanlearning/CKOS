@@ -1,0 +1,8 @@
+{
+    "C:\\": [
+        { "name": "manual.md", "type": "MD", "link": "files/manual.md" },
+        { "name": "image.webp", "type": "WEBP", "link": "files/image.webp" },
+        { "name": "video.mp4", "type": "MP4", "link": "files/video.mp4" },
+        { "name": "app.exe", "type": "EXE", "link": "files/app.exe" }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "commands": [
+        { "name": "help", "file": "help.js" },
+        { "name": "dir", "file": "dir.js" },
+        { "name": "cd", "file": "cd.js" },
+        { "name": "read", "file": "read.js" },
+        { "name": "view", "file": "view.js" },
+        { "name": "edit", "file": "edit.js" }
+    ]
+}

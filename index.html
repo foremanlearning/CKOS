@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CKOS Emulator</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/markdown-it/12.3.2/markdown-it.min.js"></script>
+</head>
+<body>
+    <!-- Terminal Window -->
+    <div id="terminal" class="container">
+        <div id="output">
+            <div class="mb-2">Welcome to CKOS 0.1... type 'help' to get started...</div>
+        </div>
+        <div class="output-line">
+            <div class="prompt">C:\></div>
+            <div id="current-input" class="input-line"></div>
+            <span class="blinking-cursor"></span>
+        </div>
+    </div>
+
+    <!-- Floating Window -->
+    <div id="floatingWindow">
+        <div id="windowHeader">
+            <span id="windowTitle">File Content</span>
+            <div class="window-controls">
+                <i class="bi bi-dash-lg window-control" id="minimizeWindow"></i>
+                <i class="bi bi-arrows-fullscreen window-control" id="maximizeWindow"></i>
+                <i class="bi bi-x-lg window-control" id="closeWindow"></i>
+            </div>
+        </div>
+        <div id="windowBody">
+            <!-- Rendered markdown content will be inserted here -->
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/modal.js"></script>
+</body>
+</html>
